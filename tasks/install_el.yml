@@ -1,0 +1,8 @@
+---
+# tasks file for grype | EL Family
+
+- name: EL Family | Downloading and installing {{ grype_app }} {{ grype_version }}
+  yum:
+    name: "{{ grype_el_url }}"
+    state: "{{ grype_desired_state }}"
+    disable_gpg_check: yes
