@@ -27,6 +27,6 @@ galaxy_info:
     - scanner
     - container
     - images
-    - filesystems.
+    - filesystems
     - os
     - linux
