@@ -1,8 +1,8 @@
 ---
-# tasks file for duf | EL Family
+# tasks file for grype | EL Family
 
-- name: EL Family | Downloading and installing {{ duf_app }} {{ duf_version }}
+- name: EL Family | Downloading and installing {{ grype_app }} {{ grype_version }}
   yum:
-    name: "{{ duf_el_url }}"
-    state: "{{ duf_desired_state }}"
+    name: "{{ grype_el_url }}"
+    state: "{{ grype_desired_state }}"
     disable_gpg_check: yes
