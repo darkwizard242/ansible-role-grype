@@ -17,7 +17,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 grype_app: grype
 grype_desired_state: present
-grype_version: 0.37.0
+grype_version: 0.38.0
 grype_os: linux
 grype_arch: amd64
 
