@@ -7,7 +7,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 PACKAGE = 'grype'
-PACKAGE_BINARY = "/usr/local/bin/grype"
+PACKAGE_BINARY = "/usr/local/grype"
 
 
 def test_grype_package_installed(host):
