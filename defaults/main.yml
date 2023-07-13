@@ -3,7 +3,7 @@
 
 grype_app: grype
 grype_desired_state: present
-grype_version: 0.63.1
+grype_version: 0.64.0
 grype_os: linux
 grype_arch: amd64
 
