@@ -1,4 +1,4 @@
-[![build-test](https://github.com/darkwizard242/ansible-role-grype/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-grype/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-grype/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-grype/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/57357?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/57357?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/57357?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-grype&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-grype) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-grype&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-grype) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-grype&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-grype) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-grype&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-grype) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-grype?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-grype?color=orange&style=flat-square)
+[![build-test](https://github.com/darkwizard242/ansible-role-grype/workflows/build-and-test/badge.svg?branch=master)](https://github.com/darkwizard242/ansible-role-grype/actions?query=workflow%3Abuild-and-test) [![release](https://github.com/darkwizard242/ansible-role-grype/workflows/release/badge.svg)](https://github.com/darkwizard242/ansible-role-grype/actions?query=workflow%3Arelease) ![Ansible Role](https://img.shields.io/ansible/role/d/darkwizard242/grype) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-grype&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ansible-role-grype) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-grype&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ansible-role-grype) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-grype&metric=security_rating)](https://sonarcloud.io/dashboard?id=ansible-role-grype) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-grype?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-grype?color=orange&style=flat-square)
 
 # Ansible Role: grype
 
@@ -17,7 +17,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 grype_app: grype
 grype_desired_state: present
-grype_version: 0.75.0
+grype_version: 0.76.0
 grype_os: linux
 grype_arch: amd64
 
@@ -34,7 +34,7 @@ Variable            | Description
 ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------
 grype_app           | Defines the app to install i.e. **grype**
 grype_desired_state | Defined to dynamically chose whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package. Defaults to `present`.
-grype_version       | Defined to dynamically fetch the desired version to install. Defaults to: **0.75.0**
+grype_version       | Defined to dynamically fetch the desired version to install. Defaults to: **0.76.0**
 grype_os            | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
 grype_arch          | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
 grype_debian_url    | Defines URL to download the 'deb' package from for Debian/Ubuntu family systems.
