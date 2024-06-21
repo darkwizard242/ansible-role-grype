@@ -18,27 +18,35 @@ Available variables are listed below (located in `defaults/main.yml`):
 grype_app: grype
 grype_desired_state: present
 grype_version: 0.79.0
-grype_os: linux
-grype_arch: amd64
+grype_os: "{{ ansible_system | lower }}"
+grype_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
 
 # For Debian/Ubuntu Family
-grype_debian_url: "https://github.com/anchore/{{ grype_app }}/releases/download/v{{ grype_version }}/{{ grype_app }}_{{ grype_version }}_{{ grype_os }}_{{ grype_arch }}.deb"
+grype_debian_url: "https://github.com/anchore/{{ grype_app }}/releases/download/v{{ grype_version }}/{{ grype_app }}_{{ grype_version }}_{{ grype_os }}_{{ grype_architecture_map[ansible_architecture] }}.deb"
 
 # For EL Family
-grype_el_url: "https://github.com/anchore/{{ grype_app }}/releases/download/v{{ grype_version }}/{{ grype_app }}_{{ grype_version }}_{{ grype_os }}_{{ grype_arch }}.rpm"
+grype_el_url: "https://github.com/anchore/{{ grype_app }}/releases/download/v{{ grype_version }}/{{ grype_app }}_{{ grype_version }}_{{ grype_os }}_{{ grype_architecture_map[ansible_architecture] }}.rpm"
 ```
 
 ### Variables table:
 
-Variable            | Description
-------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------
-grype_app           | Defines the app to install i.e. **grype**
-grype_desired_state | Defined to dynamically chose whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package. Defaults to `present`.
-grype_version       | Defined to dynamically fetch the desired version to install. Defaults to: **0.79.0**
-grype_os            | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
-grype_arch          | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
-grype_debian_url    | Defines URL to download the 'deb' package from for Debian/Ubuntu family systems.
-grype_el_url        | Defines URL to download the 'rpm' package from for EL family systems.
+Variable               | Description
+---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------
+grype_app              | Defines the app to install i.e. **grype**
+grype_desired_state    | Defined to dynamically chose whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package. Defaults to `present`.
+grype_version          | Defined to dynamically fetch the desired version to install. Defaults to: **0.79.0**
+grype_os               | Defines os type. Used for obtaining the correct type of binaries based on OS type.
+grype_architecture_map | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture.
+grype_debian_url       | Defines URL to download the 'deb' package from for Debian/Ubuntu family systems.
+grype_el_url           | Defines URL to download the 'rpm' package from for EL family systems.
 
 ## Dependencies
 
