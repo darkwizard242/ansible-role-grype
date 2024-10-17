@@ -17,7 +17,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 grype_app: grype
 grype_desired_state: present
-grype_version: 0.82.0
+grype_version: 0.82.1
 grype_os: "{{ ansible_system | lower }}"
 grype_architecture_map:
   amd64: amd64
@@ -42,7 +42,7 @@ Variable               | Description
 ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------
 grype_app              | Defines the app to install i.e. **grype**
 grype_desired_state    | Defined to dynamically chose whether to install (i.e. either `present` or `latest`) or uninstall (i.e. `absent`) the package. Defaults to `present`.
-grype_version          | Defined to dynamically fetch the desired version to install. Defaults to: **0.82.0**
+grype_version          | Defined to dynamically fetch the desired version to install. Defaults to: **0.82.1**
 grype_os               | Defines os type. Used for obtaining the correct type of binaries based on OS type.
 grype_architecture_map | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture.
 grype_debian_url       | Defines URL to download the 'deb' package from for Debian/Ubuntu family systems.
