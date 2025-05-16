@@ -3,7 +3,7 @@
 
 grype_app: grype
 grype_desired_state: present
-grype_version: 0.91.2
+grype_version: 0.92.1
 grype_os: "{{ ansible_system | lower }}"
 grype_architecture_map:
   amd64: amd64
